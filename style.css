@@ -122,6 +122,24 @@
 .bg-glass-lighten-6 {
   background-color: var(--glass-lighten-6) !important;
 }
+.bg-glass-darken-1 {
+  background-color: var(--glass-darken-1) !important;
+}
+.bg-glass-darken-2 {
+  background-color: var(--glass-darken-2) !important;
+}
+.bg-glass-darken-3 {
+  background-color: var(--glass-darken-3) !important;
+}
+.bg-glass-darken-4 {
+  background-color: var(--glass-darken-4) !important;
+}
+.bg-glass-darken-5 {
+  background-color: var(--glass-darken-5) !important;
+}
+.bg-glass-darken-6 {
+  background-color: var(--glass-darken-6) !important;
+}
 
 /* Global Styles */
 
@@ -214,11 +232,16 @@ li {
 
 header {
   background-color: var(--glass-lighten-4);
-  padding: 1rem;
+  background-color: var(--dark);
+}
+
+nav {
+  background-color: var(--glass-lighten-4);
+  /* padding: 1rem; */
 }
 main {
   background-color: var(--glass-lighten-2);
-  padding: 1rem;
+  /* padding: 1rem 0; */
 }
 .hero {
   background-color: var(--glass-lighten-3);
@@ -226,6 +249,8 @@ main {
 }
 footer {
   background-color: var(--glass-lighten-4);
+  background-color: var(--dark);
+  color: var(--light);
   padding: 1rem;
 }
 
@@ -261,7 +286,8 @@ footer {
 }
 
 .para {
-  margin: 1rem auto;
+  margin: 1.25rem auto;
+  font-size: 1.25rem;
 }
 
 .flex {
@@ -438,6 +464,12 @@ footer {
   width: 100% !important;
   height: 100% !important;
 }
+.section {
+  padding: 6rem 1rem;
+}
+.lock-scroll {
+  overflow: hidden;
+}
 
 /******************* MARGIN AND PADDING *******************/
 
@@ -578,6 +610,43 @@ footer {
   align-items: center;
 }
 
+/******************* Scroll To Top Button *******************/
+.scrollTop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 800px;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--glass-lighten-4);
+  border-radius: 50%;
+  background-size: 2.25rem;
+  background-position: center;
+  z-index: 99;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+}
+.scrollTop svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.scrollTop.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 2.5rem;
+}
+
+@media (max-width: 750px) {
+  .scrollTop {
+    right: 1rem;
+  }
+}
+
 /******************* BUTTONS *******************/
 
 .btn {
@@ -649,6 +718,7 @@ footer {
   background-color: var(--glass-lighten-3);
   border-bottom: 1px solid var(--glass-darken-1);
   border-radius: 0.5rem;
+  z-index: initial;
 }
 .accordion-description {
   padding: 1rem;
@@ -900,6 +970,197 @@ textarea:focus {
 @media screen and (max-width: 750px) {
   .card {
     width: 100% !important;
+  }
+}
+
+/******************* NAVBAR *******************/
+
+/*  Toggle Menu */
+
+.menuToggle {
+  display: none;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  margin: 0.25rem 0;
+  background-color: var(--babypink6);
+  transition: 0.6s;
+  transform: translateY(0);
+  transition: all 0.45s;
+  border-radius: 0.5rem;
+  display: block;
+  height: 0.3rem;
+  width: 2.5rem;
+}
+.bar2 {
+  transition: all 0.001s;
+  visibility: hidden;
+}
+.menuToggle.active .bar1 {
+  transform: translate(0, calc(0.35rem + 0.2rem)) rotate(135deg);
+}
+.menuToggle.active .bar2 {
+  background-color: transparent;
+}
+.menuToggle.active .bar3 {
+  transform: translate(0, calc(-0.35rem - 0.2rem)) rotate(-135deg);
+}
+
+/* expanded navbar */
+
+.navbar-small-screen {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(25, 25, 25, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  transition: 0.5s;
+  display: none;
+}
+
+.navbar-small-screen.active {
+  left: 0;
+}
+.navbar-small-screen ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+.navbar-small-screen ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.navbar-small-screen ul li a {
+  color: #fff;
+  text-shadow: 2px 2px 10px #000;
+  font-size: 200%;
+  letter-spacing: 4px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.navbar-small-screen ul li a:hover {
+  color: var(--babypink6);
+}
+
+/* .navbar-large-screen  */
+
+.navbar-large-screen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.95);
+  background-color: rgba(20, 20, 20, 1);
+  position: sticky;
+  top: -1px;
+  z-index: 100;
+  transition: 0.25s;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.navbar-large-screen .active {
+  /* background-color: transparent; */
+  backdrop-filter: none;
+}
+
+.logo {
+  color: var(--babypink6);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-large-screen ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--glass);
+  width: 100% !important;
+  /* justify-content: space-evenly !important; */
+}
+
+.navbar-large-screen ul li {
+  padding: 0 1rem;
+}
+
+.navbar-large-screen ul li a {
+  font-size: 1rem;
+  color: #eee;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  letter-spacing: 1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--glass);
+  background-color: var(--glass-lighten-1);
+  border-radius: 0.5rem;
+}
+.navbar-large-screen ul li a:hover {
+  /* color: var(--babypink6); */
+  background-color: var(--glass);
+}
+
+@media (max-width: 750px) {
+  header {
+    position: sticky;
+    top: -1px;
+    z-index: 101;
+  }
+  .navbar-large-screen {
+    flex-direction: row;
+  }
+  .navbar-large-screen ul {
+    display: none;
+  }
+  .navbar-small-screen {
+    display: flex;
+  }
+  .menuToggle {
+    display: block;
+  }
+  .logo {
+    margin-right: auto;
+  }
+}
+
+@media (max-height: 500px) {
+  .navbar-large-screen ul {
+    display: none;
+  }
+  .menuToggle {
+    display: block;
+  }
+  .navbar-small-screen ul {
+    line-height: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 4rem;
+    align-items: flex-start;
+  }
+  .navbar-small-screen ul li a {
+    font-size: 1em;
   }
 }
 

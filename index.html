@@ -9,34 +9,107 @@
     <title>Baby CSS</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="m2">
 
-    <div class="container rounded shadow">
-        <nav class="rounded-top">
+    <!-- Sroll to top -->
+    <div class="scrollTop cursor-focus" onclick="scrollToTop();"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="2.5rem" height="2.5rem" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path d="M2434 4955 c-33 -7 -94 -30 -135 -50 -70 -35 -113 -76 -815 -777
+                -791 -790 -792 -791 -837 -933 -31 -98 -30 -242 1 -342 88 -284 391 -456 681
+                -388 138 33 177 61 417 297 121 120 223 218 227 218 4 0 7 -523 7 -1162 0
+                -1292 -3 -1227 68 -1362 93 -179 303 -306 507 -306 204 0 414 127 507 306 71
+                135 68 70 68 1367 0 642 3 1167 7 1167 4 0 108 -100 232 -223 191 -188 236
+                -228 292 -255 171 -83 365 -81 535 6 118 60 235 202 276 335 31 100 32 245 1
+                342 -45 143 -46 144 -837 933 -701 700 -745 742 -815 777 -124 62 -256 79
+                -387 50z" />
+            </g>
+        </svg>
+    </div>
 
-            <header class="rounded-top">
+    <div class="container-large rounded shadow">
 
-                <h1>Baby CSS</h1>
+        <header class="rounded-top flex-center">
 
-            </header>
+            <a class="logo" href="/" aria-label="logo">
+                <h1 class="p1">
+                    Baby css
+                </h1>
+            </a>
 
+            <!-- Toggle menu icon -->
+            <div class="menuToggle">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </header>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar-large-screen">
+
+            <ul class="py">
+                <li class="nav-li">
+                    <a class="nav-links" href="#hero">hero</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-links" href="#accordions">accordions</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-links" href="#forms">forms</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-links" href="#cards">cards</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-links" href="#footer">footer</a>
+                </li>
+            </ul>
         </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="navbar-small-screen">
+            <ul>
+                <li class="nav-li">
+                    <a class="mobile-nav-links" href="#hero">hero</a>
+                </li>
+                <li class="nav-li">
+                    <a class="mobile-nav-links" href="#accordions">accordions</a>
+                </li>
+                <li class="nav-li">
+                    <a class="mobile-nav-links" href="#forms">forms</a>
+                </li>
+                <li class="nav-li">
+                    <a class="mobile-nav-links" href="#cards">cards</a>
+                </li>
+                <li class="nav-li">
+                    <a class="mobile-nav-links" href="#footer">footer</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- </nav> -->
 
         <section class="hero" id="hero">
             <h2>A minimalistic css library</h2>
-            <img src="./img/logo-001.png" alt="card-img" class="image rounded shadow my my mb-none"
-                style="max-width: 100%;">
+            <div class="container-small">
+                <img src="./img/logo-001.png" alt="card-img" class="image rounded shadow my mb-none"
+                    style="max-width: 100%;">
+            </div>
             <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum est porro maiores quod
                 quaerat obcaecati ut fugiat temporibus molestiae error dolorum magni assumenda excepturi neque
-                asperiores cupiditate odit, at enim sed facere repellat labore corporis nostrum? Repellat nostrum vitae,
+                asperiores cupiditate odit, at enim sed facere repellat labore corporis nostrum? Repellat nostrum
+                vitae,
                 quasi veniam tenetur incidunt placeat culpa aut officiis. Repellendus, nam facilis!</p>
         </section>
 
         <main id="main">
 
-            <div class="my">
+            <div class="section">
                 <h2 class="underline">Headings</h2>
                 <h1>This is the main</h1>
                 <h2>This is the main</h2>
@@ -46,32 +119,36 @@
                 <h6>This is the main</h6>
             </div>
 
-            <div class="my">
+            <div class="section bg-glass-lighten-2">
                 <h2 class="underline">Paragraphs</h2>
-                <p class="para">This is a para. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+                <p>This is a para. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
                     quia
                     consequatur
                     deleniti commodi? Sit quis voluptates blanditiis. Quod, ipsa. Vel voluptatum omnis aspernatur
                     aperiam!
-                    Dignissimos ut mollitia vel tenetur, consectetur quae error, harum quisquam perspiciatis, obcaecati
-                    autem veritatis dolorem labore maxime quaerat. Sunt asperiores quia quaerat velit, fugit recusandae,
-                    impedit et blanditiis saepe distinctio dolore autem ratione libero provident tempora corrupti! Hic
+                    Dignissimos ut mollitia vel tenetur, consectetur quae error, harum quisquam perspiciatis,
+                    obcaecati
+                    autem veritatis dolorem labore maxime quaerat. Sunt asperiores quia quaerat velit, fugit
+                    recusandae,
+                    impedit et blanditiis saepe distinctio dolore autem ratione libero provident tempora corrupti!
+                    Hic
                     alias
                     ipsam non impedit error, reiciendis, deleniti fugiat cum eum laudantium animi. Quae sit illum
                     expedita
-                    facilis, officia cumque non nam delectus modi quas, voluptates nemo earum optio repellendus debitis
+                    facilis, officia cumque non nam delectus modi quas, voluptates nemo earum optio repellendus
+                    debitis
                     explicabo exercitationem natus iusto soluta est! Ex, alias.</p>
                 <a href="#">This is a link</a>
             </div>
 
-            <div class="my">
+            <div class="section">
                 <h2 class="underline">Buttons</h2>
                 <button class="btn my bg-yellow">Normal Btn</button>
                 <a href="#" class="btn my bg-blue">Anchor Tag</a>
                 <a href="#" class="btn my shadow bg-red">Btn with Shadow</a>
             </div>
 
-            <div class="my">
+            <div class="section bg-glass-lighten-2">
                 <h2 class="underline">Lists</h2>
                 <div class="m1 mx-auto container flex-col rounded bg-red p1">
                     <h3 class="p1">This is a List</h3>
@@ -85,9 +162,9 @@
                 </div>
             </div>
 
-            <div class="my">
+            <div class="section" id="accordions">
                 <h2 class="underline">Accordions</h2>
-                <div class="accordion container-small">
+                <div class="accordion container">
                     <div class="accordion-container shadow glass-border">
                         <h3 class="accordion-container-header">Accordion Heading</h3>
                         <div class="accordion-item shadow">
@@ -104,7 +181,8 @@
 
                             <div class="accordion-content">
                                 <p class="accordion-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia in reprehenderit sunt.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia in reprehenderit
+                                    sunt.
                                 </p>
                             </div>
                         </div>
@@ -125,7 +203,8 @@
                                 <p class="accordion-description">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque saepe earum
                                     labore
-                                    numquam perspiciatis voluptatem eaque, soluta vitae nostrum hic velit vel eum vero
+                                    numquam perspiciatis voluptatem eaque, soluta vitae nostrum hic velit vel eum
+                                    vero
                                     excepturi.
                                 </p>
                             </div>
@@ -147,7 +226,8 @@
                                 <p class="accordion-description">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum sunt, quo ipsa
                                     minus,
-                                    quam commodi consequatur a neque consectetur asperiores eos! Ut labore sequi dolor
+                                    quam commodi consequatur a neque consectetur asperiores eos! Ut labore sequi
+                                    dolor
                                     facere voluptas perspiciatis excepturi explicabo! Tenetur autem quos maxime sit.
                                     Fuga
                                     quam numquam cumque velit possimus ad, iure maiores explicabo in voluptas ullam,
@@ -163,7 +243,7 @@
                 </div>
             </div>
 
-            <div class="my">
+            <div class="section bg-glass-lighten-2">
                 <h2 class="underline">Badges</h2>
                 <div class="flex">
                     <span class="badge rounded ">default</span>
@@ -174,9 +254,9 @@
                 </div>
             </div>
 
-            <div class="my">
+            <div class="section" id="forms">
                 <h2 class="underline">Forms</h2>
-                <form class="form container-small shadow" autocomplete="off">
+                <form class="form container shadow" autocomplete="off">
                     <input class="shadow" type="text" placeholder="Your Name" required="required" id="name" />
                     <input class="shadow" type="email" placeholder="Your Email" required="required" id="email" />
                     <textarea class="shadow" class="form-textarea" type="text" placeholder="Write your message here..."
@@ -186,7 +266,7 @@
                 </form>
             </div>
 
-            <div class="my">
+            <div class="section bg-glass-lighten-2" id="cards">
                 <h2 class="underline">Cards</h2>
                 <h3 class="m1 mx-none mobile-display-none">3 Cards in a row</h3>
                 <div class="flex m1">
@@ -197,7 +277,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -214,7 +295,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -231,7 +313,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -352,7 +435,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -369,7 +453,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -388,7 +473,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -408,7 +494,8 @@
                             </h4>
                             <h4 class="card-subtitle">Sub Title</h4>
                             <p class="card-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat voluptatibus
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat
+                                voluptatibus
                                 atque minus veniam eveniet laborum ratione fuga, voluptatum ipsa.
 
                             </p>
@@ -452,7 +539,7 @@
 
         </main>
 
-        <footer class="rounded-bottom">
+        <footer class="rounded-bottom" id="footer">
 
             <h1>Baby CSS</h1>
             <p class="para text-center">© <span id="year"></span> Baby CSS | All rights reserved.</p>
